@@ -1,0 +1,108 @@
+.logo-color,
+.logo-white {
+  width: 130px;
+  height: 70px;
+}
+.bg-img {
+  animation: slide 5s linear infinite !important;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0; /* Adjust the percentage for the desired slide effect */
+  }
+}
+.faq-accordion .accordion-item .accordion-button:not(.collapsed) {
+  color: #03a3ff !important;
+}
+.bg-blue {
+  background-color: #03a3ff;
+}
+.btn-custom {
+  background-color: #03a3ff !important;
+  color: white;
+}
+.btn-custom:hover {
+  background-color: #03a3ff;
+  color: white;
+}
+.text-black {
+  color: #0c0800 !important;
+}
+.text-green {
+  color: #2dcd73 !important;
+}
+.bg-green {
+  background-color: #2dcd73;
+}
+.social a {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  color: #dadada;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 40px rgba(33, 38, 106, 0.15);
+  box-shadow: 0px 0px 40px rgba(33, 38, 106, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.social a i {
+  color: #0c0800;
+}
+.fw-100 {
+  font-weight: 100 !important;
+}
+.text-blue {
+  color: #03a3ff;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.bl-5 {
+  border-left: 5px solid #03a3ff;
+}
+.cyber-cta-bg:hover {
+  border-left: 5px solid #2dcd73 !important;
+  cursor: pointer;
+}
+.cyber-cta-bg:hover a {
+  background-color: #2dcd73;
+}
+.icon-box span {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-size: 22px;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.fs-25 {
+  font-size: 25px;
+}
+.number-badge {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.text-end {
+  text-align: end;
+}
