@@ -106,3 +106,36 @@
 .text-end {
   text-align: end;
 }
+.b-1 {
+  border: 1px solid #dadada;
+}
+.icon {
+  border-left: 1px solid #dadada;
+  font-size: 14px;
+}
+form .form-control::-webkit-input-placeholder {
+  color: gray !important;
+  opacity: 0.5 !important;
+}
+
+form .form-control::-moz-placeholder.a-tag {
+  color: gray;
+  opacity: 0.5 !important;
+}
+form .form-control:-ms-input-placeholder {
+  color: gray;
+  opacity: 0.5 !important;
+}
+form .form-control:placeholder {
+  color: gray;
+  opacity: 0.5 !important;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px !important;
+}
+.fs-45 {
+  font-size: 45px;
+}
