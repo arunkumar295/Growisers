@@ -80,7 +80,7 @@
       <!--header section start-->
       <!--header start-->
       <header class="main-header position-absolute w-100">
-        <nav class="navbar navbar-expand-xl navbar-dark sticky-header z-10">
+        <nav class="navbar navbar-expand-xl navbar-light sticky-header z-10">
           <div
             class="container d-flex align-items-center justify-content-lg-between position-relative"
           >
@@ -186,7 +186,7 @@
               <div
                 class="slider-one slider bg-img"
                 style="
-                  background: url('assets/img/index/banner.jpg') no-repeat
+                  background: url('assets/img/product/contact-us.png') no-repeat
                     center center / cover;
                 "
               >
@@ -236,25 +236,25 @@
               <div
                 class="d-flex align-items-center justify-content-evenly b-1 mb-4"
               >
-                <i class="fa-regular fa-house text-green p-3"></i>
+                <i class="fa-solid fa-house text-green p-3"></i>
                 <p class="p-2 mb-0 icon">
-                  Welcome to Growisers, your trusted source for trade
+                  Address to Growisers, your trusted source for trade
                 </p>
               </div>
               <div
                 class="d-flex align-items-center justify-content-evenly b-1 mb-4"
               >
-                <i class="fa-regular fa-house text-green p-3"></i>
+                <i class="fa-solid fa-envelop text-green p-3"></i>
                 <p class="p-2 mb-0 icon">
-                  Welcome to Growisers, your trusted source for trade
+                  Mail to Growisers, your trusted source for trade
                 </p>
               </div>
               <div
                 class="d-flex align-items-center justify-content-evenly b-1 mb-4"
               >
-                <i class="fa-regular fa-house text-green p-3"></i>
+                <i class="fa-solid fa-phone text-green p-3"></i>
                 <p class="p-2 mb-0 icon">
-                  Welcome to Growisers, your trusted source for trade
+                  Phone to Growisers, your trusted source for trade
                 </p>
               </div>
               <div class="b-1 p-3">
@@ -267,11 +267,14 @@
             </div>
             <div class="col-lg-6 col-md-8">
               <div class="section-heading">
-                <h2 class="fw-500">
-                  Talk to Our Sales & Marketing Department Team
-                </h2>
+                <h2 class="fw-500">Send Us Message</h2>
               </div>
-              <form action="#" class="register-form">
+              <div id="thank-you-message" style="display: none">
+                <p>
+                  Thank you for your submission! We will get back to you soon.
+                </p>
+              </div>
+              <form class="register-form" id="contact-us" onsubmit="arun(e)">
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="input-group mb-3">
@@ -279,6 +282,7 @@
                         type="text"
                         class="form-control"
                         id="firstName"
+                        name="firstname"
                         required
                         placeholder="First name"
                         aria-label="First name"
@@ -291,6 +295,7 @@
                         type="text"
                         class="form-control"
                         id="lastName"
+                        name="lastname"
                         placeholder="Last name"
                         aria-label="Last name"
                       />
@@ -302,6 +307,7 @@
                         type="text"
                         class="form-control"
                         id="phone"
+                        name="phone"
                         required
                         placeholder="Phone"
                         aria-label="Phone"
@@ -313,6 +319,7 @@
                       <input
                         type="email"
                         class="form-control"
+                        name="email"
                         id="email"
                         required
                         placeholder="Email"
@@ -326,6 +333,7 @@
                         class="form-control"
                         id="yourMessage"
                         required
+                        name="message"
                         placeholder="How can we help you?"
                         style="height: 120px"
                       ></textarea>
@@ -471,7 +479,10 @@
     <script src="assets/js/vendors/parallax.min.js"></script>
     <script src="assets/js/vendors/aos.js"></script>
     <script src="assets/js/vendors/massonry.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="assets/js/contact-form.js"></script>
     <script src="assets/js/app.js"></script>
+
     <!--endbuild-->
   </body>
 </html>
