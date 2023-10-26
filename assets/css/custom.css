@@ -4,17 +4,10 @@
   height: 70px;
 }
 .bg-img {
-  animation: slide 5s linear infinite !important;
+  background-size: 100% 100% !important;
+  background-attachment: fixed;
 }
 
-@keyframes slide {
-  0% {
-    background-position: 0% 0;
-  }
-  100% {
-    background-position: 100% 0; /* Adjust the percentage for the desired slide effect */
-  }
-}
 .faq-accordion .accordion-item .accordion-button:not(.collapsed) {
   color: #03a3ff !important;
 }
@@ -24,6 +17,9 @@
 .btn-custom {
   background-color: #03a3ff !important;
   color: white;
+}
+.crm-bg {
+  background-color: #093a3e;
 }
 .btn-custom:hover {
   background-color: #03a3ff;
@@ -37,6 +33,11 @@
 }
 .bg-green {
   background-color: #2dcd73;
+}
+@media screen and (max-width: 768px) {
+  .pr-md {
+    padding-right: 50px !important;
+  }
 }
 .social a {
   width: 32px;
@@ -138,4 +139,16 @@ form .form-control:placeholder {
 }
 .fs-45 {
   font-size: 45px;
+}
+.fs-25 {
+  font-size: 25px;
+}
+.fs-70 {
+  font-size: 70px !important;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.slider1 {
+  padding: 200px 0px;
 }

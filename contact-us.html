@@ -80,7 +80,7 @@
       <!--header section start-->
       <!--header start-->
       <header class="main-header position-absolute w-100">
-        <nav class="navbar navbar-expand-xl navbar-light sticky-header z-10">
+        <nav class="navbar navbar-expand-xl navbar-dark sticky-header z-10">
           <div
             class="container d-flex align-items-center justify-content-lg-between position-relative"
           >
@@ -187,7 +187,7 @@
                 class="slider-one slider bg-img"
                 style="
                   background: url('assets/img/product/contact-us.png') no-repeat
-                    center center / cover;
+                    center center;
                 "
               >
                 <div class="container">
@@ -201,14 +201,14 @@
                           class="fw-500 display-5 text-white mb-4"
                           data-aos="fade-up"
                         >
-                          Your Source for Pure Virgin Coconut Oil
+                          You Can Contact Us
                         </h1>
                         <a
                           href="request-demo.html"
                           class="btn btn-custom mt-4"
                           data-aos="fade-up"
                         >
-                          Order Now <i class="far fa-arrow-right"></i>
+                          Reach us <i class="far fa-arrow-right"></i>
                         </a>
                       </div>
                     </div>
@@ -228,7 +228,7 @@
         "
       >
         <div class="container">
-          <div class="row justify-content-lg-evenly align-items-center">
+          <div class="row justify-content-lg-evenly">
             <div class="col-lg-4 col-md-8">
               <div class="section-heading">
                 <h2 class="fw-500">Get in touch</h2>
@@ -244,7 +244,7 @@
               <div
                 class="d-flex align-items-center justify-content-evenly b-1 mb-4"
               >
-                <i class="fa-solid fa-envelop text-green p-3"></i>
+                <i class="fa-solid fa-envelope text-green p-3"></i>
                 <p class="p-2 mb-0 icon">
                   Mail to Growisers, your trusted source for trade
                 </p>
@@ -255,13 +255,6 @@
                 <i class="fa-solid fa-phone text-green p-3"></i>
                 <p class="p-2 mb-0 icon">
                   Phone to Growisers, your trusted source for trade
-                </p>
-              </div>
-              <div class="b-1 p-3">
-                <h6 class="text-green fw-400">Working hours</h6>
-                <p class="fs-14">
-                  Monday - Friday : 9:00am to 10pm<br />Monday - Friday : 9:00am
-                  to 10pm<br />Sunday Holiday
                 </p>
               </div>
             </div>
@@ -293,6 +286,7 @@
                     <div class="input-group mb-3">
                       <input
                         type="text"
+                        required
                         class="form-control"
                         id="lastName"
                         name="lastname"
@@ -304,7 +298,7 @@
                   <div class="col-sm-6">
                     <div class="input-group mb-3">
                       <input
-                        type="text"
+                        type="number"
                         class="form-control"
                         id="phone"
                         name="phone"
@@ -340,7 +334,11 @@
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-custom mt-4">
+                <button
+                  type="submit"
+                  class="btn btn-custom mt-4"
+                  id="submit-button"
+                >
                   Get in Touch
                 </button>
               </form>
@@ -449,19 +447,23 @@
                 <div
                   class="d-flex align-items-center justify-content-evenly mb-4"
                 >
-                  <i class="fa-regular fa-house text-green fs-45"></i>
+                  <i class="fa-regular fa-envelope text-green fs-25"></i>
                   <div>
                     <h5 class="text-white">Email</h5>
-                    <p class="mb-0 text-white">info@gmail.com</p>
+                    <a href="mailto:info@growisers.com" target="_blank"
+                      ><p class="mb-0 text-white">info@growisers.com</p></a
+                    >
                   </div>
                 </div>
                 <div
                   class="d-flex align-items-center justify-content-evenly mb-4"
                 >
-                  <i class="fa-regular fa-house text-green fs-45"></i>
+                  <i class="fa-regular fa-phone text-green fs-25"></i>
                   <div>
-                    <h5 class="text-white">Email</h5>
-                    <p class="mb-0 text-white">info@Gmail.com</p>
+                    <h5 class="text-white">Phone</h5>
+                    <a href="tel:8056262754" target="_blank"
+                      ><p class="mb-0 text-white">info@growisers.com</p></a
+                    >
                   </div>
                 </div>
               </div>
