@@ -18,6 +18,9 @@
   background-color: #03a3ff !important;
   color: white;
 }
+.error {
+  border: 1px solid red !important;
+}
 .crm-bg {
   background-color: #093a3e;
 }
@@ -151,4 +154,8 @@ form .form-control:placeholder {
 }
 .slider1 {
   padding: 200px 0px;
+}
+.cyber-count-box {
+  width: 310px;
+  height: 290px;
 }

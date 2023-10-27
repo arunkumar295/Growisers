@@ -24518,7 +24518,7 @@ progress {
 .form-control:focus {
   color: #575757;
   background-color: #fff;
-  border-color: #175cff;
+  border-color: #03a3ff ;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0 rgba(23, 92, 255, 0.25);
   box-shadow: 0 0 0 0 rgba(23, 92, 255, 0.25);
@@ -37937,7 +37937,7 @@ h4 {
   border-color: rgba(0, 0, 0, 0.08);
 }
 .register-form input.form-control:focus {
-  border-color: #175cff;
+  border-color: #03a3ff;
 }
 .footer-bottom {
   position: relative;

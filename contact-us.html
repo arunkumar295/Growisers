@@ -186,8 +186,8 @@
               <div
                 class="slider-one slider bg-img"
                 style="
-                  background: url('assets/img/product/contact-us.png') no-repeat
-                    center center;
+                  background: url('assets/img/product/contact-us.webp')
+                    no-repeat center center;
                 "
               >
                 <div class="container">
@@ -262,11 +262,6 @@
               <div class="section-heading">
                 <h2 class="fw-500">Send Us Message</h2>
               </div>
-              <div id="thank-you-message" style="display: none">
-                <p>
-                  Thank you for your submission! We will get back to you soon.
-                </p>
-              </div>
               <form class="register-form" id="contact-us" onsubmit="arun(e)">
                 <div class="row">
                   <div class="col-sm-6">
@@ -274,11 +269,12 @@
                       <input
                         type="text"
                         class="form-control"
-                        id="firstName"
+                        id="firstname"
                         name="firstname"
                         required
                         placeholder="First name"
                         aria-label="First name"
+                        oninput="change('firstname')"
                       />
                     </div>
                   </div>
@@ -288,10 +284,11 @@
                         type="text"
                         required
                         class="form-control"
-                        id="lastName"
+                        id="lastname"
                         name="lastname"
                         placeholder="Last name"
                         aria-label="Last name"
+                        oninput="change('lastname')"
                       />
                     </div>
                   </div>
@@ -305,6 +302,7 @@
                         required
                         placeholder="Phone"
                         aria-label="Phone"
+                        oninput="change('phone')"
                       />
                     </div>
                   </div>
@@ -318,6 +316,7 @@
                         required
                         placeholder="Email"
                         aria-label="Email"
+                        oninput="change('email')"
                       />
                     </div>
                   </div>
@@ -325,11 +324,12 @@
                     <div class="input-group mb-3">
                       <textarea
                         class="form-control"
-                        id="yourMessage"
+                        id="message"
                         required
                         name="message"
                         placeholder="How can we help you?"
                         style="height: 120px"
+                        oninput="change('message')"
                       ></textarea>
                     </div>
                   </div>

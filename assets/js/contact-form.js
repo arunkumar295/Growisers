@@ -1,3 +1,7 @@
+function change(id) {
+  var element = document.getElementById(id);
+  element.classList.remove("error");
+}
 document
   .getElementById("submit-button")
   .addEventListener("click", function (e) {
@@ -5,30 +9,59 @@ document
     var form = document.getElementById("contact-us");
     var formData = new FormData(form);
 
-    // Extract form data
+    // Assuming you have elements with IDs for displaying errors
+    var firstNameElement = document.getElementById("firstname");
+    var lastNameElement = document.getElementById("lastname");
+    var phoneElement = document.getElementById("phone");
+    var emailElement = document.getElementById("email");
+    var messageElement = document.getElementById("message");
+
     var firstName = formData.get("firstname");
     var lastName = formData.get("lastname");
     var phone = formData.get("phone");
     var email = formData.get("email");
     var message = formData.get("message");
 
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "growisersexim@gmail.com",
-      Password: "1FFA1DD7A9D4C21D83A9AB0EE62CC4D96063",
-      To: "info@growisers.com",
-      From: "growisersexim@gmail.com",
-      Subject: "New form submisssion detials",
-      Body: `Firstname: ${firstName}<br>Lastname:${lastName}<br>Phone:${phone}<br>Email: ${email}<br>Message: ${message}`,
-    }).then(console.log("admin mail sent"));
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "growisersexim@gmail.com",
-      Password: "1FFA1DD7A9D4C21D83A9AB0EE62CC4D96063",
-      To: email,
-      From: "growisersexim@gmail.com",
-      Subject: "Thankyou for showing interest on us!",
-      Body: `<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed;background-color:#f9f9f9" id="bodyTable">
+    // Function to add or remove the "error" class based on the condition
+    function toggleErrorClass(element, condition) {
+      if (condition) {
+        element.classList.add("error");
+      } else {
+        element.classList.remove("error");
+      }
+    }
+
+    // Check each field and toggle the "error" class as needed
+    toggleErrorClass(firstNameElement, firstName === "");
+    toggleErrorClass(lastNameElement, lastName === "");
+    toggleErrorClass(phoneElement, phone === "");
+    toggleErrorClass(emailElement, email === "");
+    toggleErrorClass(messageElement, message === "");
+
+    if (
+      firstName != "" &&
+      lastName != "" &&
+      phone != "" &&
+      email != "" &&
+      message != ""
+    ) {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "growisersexim@gmail.com",
+        Password: "1FFA1DD7A9D4C21D83A9AB0EE62CC4D96063",
+        To: "info@growisers.com",
+        From: "growisersexim@gmail.com",
+        Subject: "New form submisssion detials",
+        Body: `Firstname: ${firstName}<br>Lastname:${lastName}<br>Phone:${phone}<br>Email: ${email}<br>Message: ${message}`,
+      }).then(console.log("admin mail sent"));
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "growisersexim@gmail.com",
+        Password: "1FFA1DD7A9D4C21D83A9AB0EE62CC4D96063",
+        To: email,
+        From: "growisersexim@gmail.com",
+        Subject: "Thankyou for showing interest on us!",
+        Body: `<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed;background-color:#f9f9f9" id="bodyTable">
       <tbody>
       <tr>
         <td style="padding-top:20px;padding-bottom:20px" align="center" valign="top"></tr></td>
@@ -93,7 +126,7 @@ document
                                       <tbody>
                                           <tr>
                                               <td style="padding: 0px 10px 10px;" align="center" valign="top" class="footerEmailInfo">
-                                                  <p class="text" style="color:#bbb;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;font-style:normal;letter-spacing:normal;line-height:20px;text-transform:none;text-align:center;padding:0;margin:0">If you have any questions please contact us <a href="mailto:info@spritle.com" style="color:#bbb;text-decoration:underline" target="_blank">info@spritle.com</a>
+                                                  <p class="text" style="color:#bbb;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;font-style:normal;letter-spacing:normal;line-height:20px;text-transform:none;text-align:center;padding:0;margin:0">If you have any questions please contact us <a href="mailto:info@growisers.com" style="color:#bbb;text-decoration:underline" target="_blank">info@growisers.com</a>
                                                       </p>
                                               </td>
                                           </tr>
@@ -113,9 +146,10 @@ document
           </tr>
       </tbody>
   </table>`,
-    }).then(function () {
-      console.log("Client thank you mail sent");
-      form.reset();
-      window.location.href = "thankyou-page.html";
-    });
+      }).then(function () {
+        console.log("Client thank you mail sent");
+        form.reset();
+        window.location.href = "thankyou-page.html";
+      });
+    }
   });
