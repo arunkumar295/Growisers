@@ -2,6 +2,14 @@ function change(id) {
   var element = document.getElementById(id);
   element.classList.remove("error");
 }
+const phoneInputField = document.querySelector("#phone"); // Assuming your input field has id="phone"
+const phoneInput = window.intlTelInput(phoneInputField, {
+  initialCountry: "in",
+  separateDialCode: true,
+  utilsScript:
+    "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+});
+const phone = phoneInput.getNumber();
 document
   .getElementById("submit-button")
   .addEventListener("click", function (e) {
@@ -18,9 +26,20 @@ document
 
     var firstName = formData.get("firstname");
     var lastName = formData.get("lastname");
-    var phone = formData.get("phone");
+    var phone = phoneInput.getNumber();
+    phone = phone.replace(/(^\+\d{2,3})(\d{1,15})/, "$1 $2");
     var email = formData.get("email");
     var message = formData.get("message");
+    console.log(
+      `Firstname: ${firstName}<br>Lastname:${lastName}<br>Phone:${phone}<br>Email: ${email}<br>Message: ${message}`
+    );
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+    if (!emailRegex.test(email)) {
+      emailElement.classList.add("error");
+      email = "";
+    } else {
+      emailElement.classList.remove("error");
+    }
 
     // Function to add or remove the "error" class based on the condition
     function toggleErrorClass(element, condition) {
@@ -149,7 +168,7 @@ document
       }).then(function () {
         console.log("Client thank you mail sent");
         form.reset();
-        window.location.href = "thankyou-page.html";
+        // window.location.href = "thankyou-page.html";
       });
     }
   });
