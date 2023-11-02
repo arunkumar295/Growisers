@@ -159,3 +159,15 @@ form .form-control:placeholder {
   width: 310px;
   height: 290px;
 }
+.justify-content-start {
+  justify-content: flex-start;
+}
+.w-50 {
+  width: 50px !important;
+}
+.h-60 {
+  height: 60px !important;
+}
+.w-75 {
+  width: 75px !important;
+}
